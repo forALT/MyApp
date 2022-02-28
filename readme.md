@@ -34,6 +34,7 @@
         $ git log
         $ git log --oneline
         $ git log --pretty=format:"%H is by %an"
+
     7. git push
         원격저장소 url 설정
             $ git remote add origin https://github.com/myvega-2k/MyApp.git
@@ -61,3 +62,18 @@
 
     10. git pull
         $ git pull origin master 
+
+## 파일의 4가지 상태
+    
+    1.untracked
+    2. tracked : unmodified, modified, staged 
+
+    tracked.txt 과 untracked.txt  2개의 파일을 생성
+    tracked.txt 파일을 수정 add, commit
+    tracked.txt 다시 수정하기
+    push 을 한다면?? 바로 수정한 내용이 반영되지 않음
+        $ git status
+    modified:   tracked.txt
+
+    modified 상태인 파일을 최신 커밋 버전으로 되돌리기
+        $ git checkout -- tracked.txt
